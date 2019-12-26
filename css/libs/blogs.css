@@ -1,0 +1,77 @@
+.blogs h2 {
+  font-size: 28px;
+  line-height: 2;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.blogs .container-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blogs row-1 img {
+  width: 100%;
+  max-width: 523px;
+  height: auto;
+}
+.blogs .text {
+  padding-left: 20px;
+}
+.blogs h3 {
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.blogs p {
+  font-size: 16px;
+  color: #444444;
+  line-height: 1.3;
+  padding-bottom: 50px;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+@media (min-width: 1050px) {
+  .blogs h2 {
+    font-size: 50px;
+    padding-bottom: 100px;
+  }
+  .blogs .container-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .blogs .container-wrapper:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .blogs .text {
+    display: block;
+    width: 455px;
+    margin-left: 75px;
+  }
+  .blogs .cta {
+    margin-left: 0;
+    margin-right: 75px;
+  }
+  .blogs h3 {
+    font-size: 40px;
+  }
+  .blogs p {
+    font-size: 16px;
+    color: #444444;
+    line-height: 1.938;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 524px) {
+  .blogs h3 {
+    text-align: center;
+  }
+  .blogs p {
+    display: block;
+    width: 500px;
+  }
+}

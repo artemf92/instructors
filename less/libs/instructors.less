@@ -1,0 +1,70 @@
+.instructors {
+
+  	h2 {
+  		margin-bottom: 30px;
+  		font-size: 28px;
+		font-family: 'Playfair Display', serif;
+		line-height: 2;
+	  	text-align: center;
+  	}
+
+	.container-wrapper {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.instructor-item {
+		margin-right: 0;
+	}
+
+
+	.instructor-item:last-child {
+		margin-right: 0;
+	}
+
+	.name {
+		font-size: 30px;
+		padding-top: 20px;
+		font-family: 'Playfair Display', serif;
+		line-height: 2.931;
+		text-align: center;
+	}
+
+	.students {
+		 font-size: 15px;
+		 line-height: 1.5;
+		 color: rgb(42, 183, 56);
+ 		 text-align: center;
+ 		 padding-top: 10px;
+	}
+
+
+}
+
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+
+@media (min-width: 1070px) {
+	
+	.instructors {
+
+		h2 {
+		font-size: 51px;
+		margin-bottom: 70px;
+		}
+
+		.container-wrapper {
+			flex-direction: row;
+		}
+
+		.instructor-item {
+			margin-right: 90px;
+		}
+
+		.instructor-item:first-child {
+		padding-left: 20px;
+		}
+	}
+
+
+}

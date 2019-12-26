@@ -1,0 +1,114 @@
+.container-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 100px;
+}
+.reviews {
+  width: 260px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.reviews .reviews-title h2 {
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  line-height: 2.778;
+  text-align: center;
+}
+.reviews .reviews-item {
+  width: 260px;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 42px;
+  position: relative;
+}
+.reviews .reviews-item .reviews-author h3 {
+  line-height: 1.938;
+  font-size: 16px;
+}
+.reviews .reviews-item .reviews-author h3:before {
+  content: "- ";
+}
+.reviews-item:last-child {
+  margin-bottom: 20;
+}
+.reviews-text p {
+  color: #999999;
+  line-height: 1.938;
+  text-align: left;
+}
+/* .reviews-text:before {
+		position: absolute;
+		top: 18px;
+		left: -18px;
+		display: block;
+		width: 36px;
+		height: 29px;
+		// background: url("../img/quote.png");
+		background-color: red;
+} */
+.video {
+  padding-bottom: 50px;
+  order: -1;
+}
+.videos {
+  width: 280px;
+  margin-right: 0;
+}
+.videos-title h2 {
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  line-height: 2.778;
+  text-align: center;
+}
+.videos img {
+  margin-bottom: 40px;
+}
+.videos img:last-child {
+  margin-bottom: 0;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+@media (min-width: 1200px) {
+  .container-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    padding-bottom: 200px;
+  }
+  .reviews-title {
+    font-size: 36px;
+    text-align: left;
+  }
+  .reviews-author h3 {
+    font-size: 24px;
+  }
+  .video {
+    padding-bottom: 0;
+    order: 0;
+  }
+  .videos {
+    margin-right: 20px;
+  }
+  .videos-title h2 {
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    line-height: 2.778;
+    text-align: left;
+  }
+  .videos img {
+    margin-bottom: 40px;
+  }
+  .videos img:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .container-wrapper {
+    justify-content: center;
+  }
+  .video {
+    margin-right: 20px;
+  }
+}

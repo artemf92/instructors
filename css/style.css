@@ -1,0 +1,493 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/*
+
+  Подключить этот файл в начало CSS/LESS файла
+  
+  Вот так:
+  
+  @import "lesselements.less";
+
+*/
+/* MY MIXINS */
+.cover {
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*
+ * Box-sizing-model
+ */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*
+ * Responsive images
+*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*
+ * Cursor change on hover on Buttons
+*/
+input[type="submit"] {
+  cursor: pointer;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+}
+.button {
+  display: inline-block;
+  line-height: 2.938;
+  border: 1px solid #e5e5e5;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  color: white;
+  background-color: #000;
+  text-decoration: none;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens - adaptive styles bofore 1200px */
+/* Medium Devices, Desktops - adaptive styles bofore 992px */
+/* Small Devices, Tablets - adaptive styles bofore 768px */
+/* Extra Small Devices, Phones - adaptive styles bofore 480px */
+/* Custom, iPhone Retina - adaptive styles bofore 320px */
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 30px 10px 0;
+}
+.menu {
+  font-size: 12px;
+  font-family: "Avenir";
+  color: #111111;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding-right: 15px;
+}
+.menu:last-child {
+  padding-right: 0;
+}
+.active {
+  font-weight: 800;
+}
+.header-title {
+  text-align: center;
+  padding-top: 50px;
+}
+.header-title h1 {
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.429;
+  font-weight: 800;
+}
+.header-desc {
+  width: 100%;
+  height: 47px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #999999;
+  padding: 0 20px 150px 20px;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+@media (min-width: 560px) {
+  .header-wrapper {
+    padding: 60px 20px 0;
+  }
+  .menu {
+    padding-right: 50px;
+    font-size: 16px;
+  }
+  .header-desc {
+    width: 100%;
+    padding-bottom: 200px;
+  }
+  .header-title {
+    padding-top: 100px;
+  }
+  .header-title h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 760px) {
+  .header-wrapper {
+    padding: 90px 10px 0;
+  }
+  .menu {
+    padding-right: 70px;
+    font-size: 16px;
+  }
+  .header-desc {
+    width: 584px;
+    padding-bottom: 200px;
+  }
+  .header-title {
+    padding-top: 200px;
+  }
+  .header-title h1 {
+    font-size: 70px;
+  }
+}
+.container-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 100px;
+}
+.reviews {
+  width: 260px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.reviews .reviews-title h2 {
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  line-height: 2.778;
+  text-align: center;
+}
+.reviews .reviews-item {
+  width: 260px;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 42px;
+  position: relative;
+}
+.reviews .reviews-item .reviews-author h3 {
+  line-height: 1.938;
+  font-size: 16px;
+}
+.reviews .reviews-item .reviews-author h3:before {
+  content: "- ";
+}
+.reviews-item:last-child {
+  margin-bottom: 20;
+}
+.reviews-text p {
+  color: #999999;
+  line-height: 1.938;
+  text-align: left;
+}
+/* .reviews-text:before {
+		position: absolute;
+		top: 18px;
+		left: -18px;
+		display: block;
+		width: 36px;
+		height: 29px;
+		// background: url("../img/quote.png");
+		background-color: red;
+} */
+.video {
+  padding-bottom: 50px;
+  order: -1;
+}
+.videos {
+  width: 280px;
+  margin-right: 0;
+}
+.videos-title h2 {
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  line-height: 2.778;
+  text-align: center;
+}
+.videos img {
+  margin-bottom: 40px;
+}
+.videos img:last-child {
+  margin-bottom: 0;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+@media (min-width: 1200px) {
+  .container-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    padding-bottom: 200px;
+  }
+  .reviews-title {
+    font-size: 36px;
+    text-align: left;
+  }
+  .reviews-author h3 {
+    font-size: 24px;
+  }
+  .video {
+    padding-bottom: 0;
+    order: 0;
+  }
+  .videos {
+    margin-right: 20px;
+  }
+  .videos-title h2 {
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    line-height: 2.778;
+    text-align: left;
+  }
+  .videos img {
+    margin-bottom: 40px;
+  }
+  .videos img:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .container-wrapper {
+    justify-content: center;
+  }
+  .video {
+    margin-right: 20px;
+  }
+}
+.instructors h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  line-height: 2;
+  text-align: center;
+}
+.instructors .container-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.instructors .instructor-item {
+  margin-right: 0;
+}
+.instructors .instructor-item:last-child {
+  margin-right: 0;
+}
+.instructors .name {
+  font-size: 30px;
+  padding-top: 20px;
+  font-family: 'Playfair Display', serif;
+  line-height: 2.931;
+  text-align: center;
+}
+.instructors .students {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #2ab738;
+  text-align: center;
+  padding-top: 10px;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+@media (min-width: 1070px) {
+  .instructors h2 {
+    font-size: 51px;
+    margin-bottom: 70px;
+  }
+  .instructors .container-wrapper {
+    flex-direction: row;
+  }
+  .instructors .instructor-item {
+    margin-right: 90px;
+  }
+  .instructors .instructor-item:first-child {
+    padding-left: 20px;
+  }
+}
+.blogs h2 {
+  font-size: 28px;
+  line-height: 2;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.blogs .container-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blogs row-1 img {
+  width: 100%;
+  max-width: 523px;
+  height: auto;
+}
+.blogs .text {
+  padding-left: 20px;
+}
+.blogs h3 {
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.blogs p {
+  font-size: 16px;
+  color: #444444;
+  line-height: 1.3;
+  padding-bottom: 50px;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+@media (min-width: 1050px) {
+  .blogs h2 {
+    font-size: 50px;
+    padding-bottom: 100px;
+  }
+  .blogs .container-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .blogs .container-wrapper:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .blogs .text {
+    display: block;
+    width: 455px;
+    margin-left: 75px;
+  }
+  .blogs .cta {
+    margin-left: 0;
+    margin-right: 75px;
+  }
+  .blogs h3 {
+    font-size: 40px;
+  }
+  .blogs p {
+    font-size: 16px;
+    color: #444444;
+    line-height: 1.938;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 524px) {
+  .blogs h3 {
+    text-align: center;
+  }
+  .blogs p {
+    display: block;
+    width: 500px;
+  }
+}
+.interest {
+  text-align: center;
+  padding-bottom: 80px;
+}
+.interest h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  line-height: 1.4;
+  padding-bottom: 60px;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+@media (min-width: 580px) {
+  .interest {
+    padding-bottom: 180px;
+  }
+  .interest h2 {
+    font-size: 50px;
+    line-height: 2;
+  }
+}
+footer .container-wrapper {
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0;
+}
+footer h3 {
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  line-height: 0.24;
+  text-align: center;
+}
+footer p {
+  font-size: 14px;
+  color: #9f9f9f;
+  line-height: 4;
+  text-align: left;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+@media (min-width: 580px) {
+  footer .container-wrapper {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  footer h3 {
+    text-align: left;
+  }
+}

@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+}
+.button {
+  display: inline-block;
+  line-height: 2.938;
+  border: 1px solid #e5e5e5;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  color: white;
+  background-color: #000;
+  text-decoration: none;
+}
+/*==========  Mobile First Method — Bootstrap Grid ==========*/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens - adaptive styles bofore 1200px */
+/* Medium Devices, Desktops - adaptive styles bofore 992px */
+/* Small Devices, Tablets - adaptive styles bofore 768px */
+/* Extra Small Devices, Phones - adaptive styles bofore 480px */
+/* Custom, iPhone Retina - adaptive styles bofore 320px */
